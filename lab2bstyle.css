@@ -1,0 +1,100 @@
+.header {
+  background-color:rgb(88,89,91);
+  text-align: center;
+  padding: 20px;
+  color:white;
+  height: 5%
+}
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+body {
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  color:rgb(88, 89, 91);
+}
+
+.submit {
+  text-align: center;
+}
+
+p {
+  margin: 20px;
+  padding: 10px;
+}
+
+form {
+  margin: auto;
+  width: 75%;
+  border: 2px solid rgb(126,128,131);
+  padding: 40px;
+}
+
+fieldset{
+  margin: auto;
+  width: 75%;  
+  padding: 10px;
+  background-color:rgb(228,229,230);
+}
+
+legend  {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: rgb(187,22,43);
+}
+
+input[type=text],[type=email],[type=tel], select, textarea{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+}
+
+textarea{
+  width: 90%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  resize: none;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+}
+
+input[type=submit]{
+  width: 35%;
+  background-color: rgb(187,22,43);
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  width: 35%;
+  background-color: rgb(126,128,131);
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  font-weight: bold;
+}

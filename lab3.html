@@ -1,0 +1,104 @@
+
+<!-- Name: Kirsten McCain; Lab: Lab 3; Description: Updated the CSS for survey from Lab2b to use LESS features (variables, variable calculations, color calculations, color functions, mixins, and parametric mixins) in addition to the CSS. -->
+
+<!DOCTYPE html>
+<html lang ="en-US">
+<head>
+<link rel="stylesheet/less" href="style-less.less">
+<script src="less.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+<title>Kia Customer Satisfaction Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+</head>
+
+<body>
+
+<div class="header">
+<img src="KIA-logo.png" alt="KIA Logo" width=15% height=auto>
+  </a>
+</div>
+<h1>Customer Satisfaction Survey</h1>
+<p style ="text-align: center;">We would appreciate your feedback regarding your recent purchase with Kia. Thank you for taking the time to help us improve our customer experiences.</p>
+<hr>
+
+<form>
+<fieldset>
+	<legend>Personal Information</legend>
+	<ol>
+	<li><label for="first-name">First Name</label><br>
+	<input type="text" name="first-name" id="first-name"></li><br>
+	<li><label for="last-name">Last Name</label><br>
+	<input type="text" name="last-name" id="last-name"></li><br>
+	<li><label for="email">Email</label><br>
+	<input type="email" name="email" id="email"></li><br>
+	<li><label for="phone">Phone</label><br>
+	<input type="tel" name="phone" id="phone"></li>
+	</ol>	
+</fieldset><br>
+<fieldset>
+	<legend>Pre-Purchase Experience</legend>
+	<ol>
+	<li><label for="IdealCar">Were you looking for a new or used car?</label><br>
+	<input type="radio" name="Search" id="IdealCar" value="New">New<br>
+	<input type="radio" name="Search" id="IdealCar" value="Used">Used<br>
+	<input type="radio" name="Search" id="IdealCar" value="Used">Either</li><br>
+	<li><label for "contact">How did you first contact our dealership?</label><br>
+	<select name ="contact" id="contact">
+		<option value="phone">Phone</option>
+		<option value="email">Email</option>
+		<option value="inperson">In Person</option>
+		<option value="facebook">Facebook</option>
+		<option value="twitter">Twitter</option>
+	</select></li><br>
+	<li><label for "cartype">Which type of car were you originally interested in? Select all that apply.</label><br>
+	<input type="checkbox" name ="cartype" id="cartype" value="SUV/Crossover">SUV/Crossover<br>
+	<input type="checkbox" name ="cartype" id="cartype" value="Sedan">Sedan<br>
+	<input type="checkbox" name ="cartype" id="cartype" value="Hatchback">Hatchback<br>
+	<input type="checkbox" name ="cartype" id="cartype" value="Minivan">Minivan</br>
+	<input type="checkbox" name ="cartype" id="cartype" value="Hybrid/Electric">Hybrid/Electric</li><br>
+	<li><label for "contactfeedback">Was there anything that could have improved your initial experience with us?</label><br>
+	<textarea name="contactfeedback" id="contactfeedback"></textarea></li>
+	</ol>
+</fieldset><br>
+<fieldset>
+	<legend>Sales Team</legend>
+	<ol>
+	<li><label for "salesrep">What was the name of the primary sales associate who helped you?</label><br>
+	<input type="text" name="salesrep" id="salesrep"></li><br>
+	<li><label for="greeting">How long did it take for you to be greeted when you first arrived?</label><br>
+	<select name ="greeting" id="greeting">
+		<option value="instantly">Less than 1 minutes</option>
+		<option value="1to2">1-2 minutes</option>
+		<option value="2to5">2-5 minutes</option>
+		<option value="Other">Over 5 minutes</option>
+	</select></li><br>
+	<li><label for "salesrepknowledge">Did your sales associate meet your expectations in their level of knowledge and professionalism? Please explain.</label><br>
+	<textarea name="salesrepknowledge" id="salesrepknowledge"></textarea></li><br>
+	<li><label for="friendliness">Did you feel like your sales associate listened to your needs and found the best option for you? Please explain.</label><br>
+	<textarea name="friendliness" id="friendliness"></textarea></li><br>
+	</ol>
+</fieldset><br>
+<fieldset>
+	<legend>Conclusion</legend>
+	<ol>
+	<li><label for="Purchase">Did you purchase the car you came into the dealership to see?</label><br>
+	<input type="radio" name="Purchase" id="Purchase" value="Yes">Yes<br>
+	<input type="radio" name="Purchase" id="Purchase" value="No">No<br>
+	<input type="radio" name="Purchase" id="Purchase" value="NA">I did not have a particular car in mind.</li><br><br>
+	<li><label for "purchasedcartype">Which type of car did you purchase?</label><br>
+	<select name ="purchasedcartype" id="purchasedcartype"> 	
+		<option value="SUV/Crossover">SUV/Crossover</option>
+		<option value="Sedan">Sedan</option>
+		<option value="Hatchback">Hatchback</option>
+		<option value="Minivan">Minivan</option>
+		<option value="Hybrid/Electric">Hybrid/Electric</option>
+	</select></li><br>
+	<li><label for="final">Is there any other feedback you would like to provide regarding your experience?</label><br>
+	<textarea name="final" id="final"></textarea></li>
+</fieldset><br><br>
+<div class="submit"><input class="SubmitButton" type="submit" value="Submit"></div>
+</form>
+
+</body>
+</html>

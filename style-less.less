@@ -1,0 +1,99 @@
+@dark_gray: #58595b;
+@medium_gray: #7e8083;
+@light_gray: #e4e5e6;
+@kia_red: #bb162b;
+@base_px: 2px;
+
+.header {
+  background-color: fadeout(@dark_gray, 10%);
+  text-align: center;
+  padding: @base_px * 10;
+  color:white;
+  height: 8%
+}
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: @base_px;
+  text-align: center;
+}
+
+body {
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  color: @dark_gray;
+}
+
+.submit {
+  text-align: center;
+}
+
+p {
+  margin: @base_px * 10;
+  padding: @base_px * 5;
+}
+
+form {
+  margin: auto;
+  width: 75%;
+  border: @base_px solid @medium_gray;
+  padding: @base_px * 20;
+}
+
+fieldset{
+  margin: auto;
+  width: 75%;  
+  padding: @base_px * 5;
+  background-color: @light_gray;
+}
+
+legend  {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: @kia_red;
+}
+
+.formFields {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  width: 90%;
+}
+
+input[type=text],[type=email],[type=tel], select, textarea{
+  .formFields;
+}
+
+textarea{
+  height: 150px;
+  resize: none;
+  .formFields;
+}
+
+.SubmitButton( @backgroundColor) {
+  width: 35%;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  font-family: Tahoma, Dotum, AppleGothic, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.3em;
+  font-weight: bold;
+  background-color: @backgroundColor;
+}
+
+input[type=submit]{
+  .SubmitButton (@kia_red);
+  border-color: @kia_red - #111111;
+}
+
+input[type=submit]:hover {
+  .SubmitButton (fadeout(@kia_red, 50%));
+}
