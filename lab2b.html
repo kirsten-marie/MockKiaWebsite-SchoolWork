@@ -1,15 +1,15 @@
 
-<!-- Name: Kirsten McCain; Lab: Lab 3; Description: Updated the CSS for survey from Lab2b to use LESS features (variables, variable calculations, color calculations, color functions, mixins, and parametric mixins) in addition to the CSS. -->
+<!-- Name: Kirsten McCain; Lab: Lab 2b; Description: Updated the survey from Lab1 to include an external CSS file to style the form using branding for Kia found on the web style guide from their website. -->
 
 <!DOCTYPE html>
 <html lang ="en-US">
 <head>
-<link rel="stylesheet/less" href="style-less.less">
-<script src="less.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+<link rel="stylesheet" type ="text/css" href="lab2bstyle.css">
 <title>Kia Customer Satisfaction Survey</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<script src="validation.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -21,19 +21,25 @@
 <h1>Customer Satisfaction Survey</h1>
 <p style ="text-align: center;">We would appreciate your feedback regarding your recent purchase with Kia. Thank you for taking the time to help us improve our customer experiences.</p>
 <hr>
+<form name="customerSurvey" id="customerSurvey">
+<!-- 	
+<script>
+	var phoneNum = document.querySelector('input[type="phone"]');
+	var validityState = phoneNum.validity;
+	console.log(validityState);
+</script>
+-->
 
-<form>
 <fieldset>
 	<legend>Personal Information</legend>
+	<div id="demographicErrors"></div>
 	<ol>
-	<li><label for="first-name">First Name</label><br>
-	<input type="text" name="first-name" id="first-name"></li><br>
-	<li><label for="last-name">Last Name</label><br>
-	<input type="text" name="last-name" id="last-name"></li><br>
+	<li><label for="fullName">Name</label><br>
+	<input type="text" name="fullName" id="fullName" required oninvalid="this.setCustomValidity('Please enter your full name.')" oninput="this.setCustomValidity('')"></li><br>
 	<li><label for="email">Email</label><br>
-	<input type="email" name="email" id="email"></li><br>
+	<input type="email" name="email" id="email" required oninvalid="this.setCustomValidity('Please enter your email address.')" oninput="this.setCustomValidity('')"></li><br>
 	<li><label for="phone">Phone</label><br>
-	<input type="tel" name="phone" id="phone"></li>
+	<input type="tel" name="phone" id="phone" placeholder="xxx-xxx-xxxx" required oninvalid="this.setCustomValidity('Please enter your phone number.')" oninput="this.setCustomValidity('')"></li>
 	</ol>	
 </fieldset><br>
 <fieldset>
@@ -97,7 +103,7 @@
 	<li><label for="final">Is there any other feedback you would like to provide regarding your experience?</label><br>
 	<textarea name="final" id="final"></textarea></li>
 </fieldset><br><br>
-<div class="submit"><input class="SubmitButton" type="submit" value="Submit"></div>
+<div class="submit"><input type="submit" value="Submit"></div>
 </form>
 
 </body>
